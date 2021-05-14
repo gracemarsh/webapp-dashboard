@@ -1,5 +1,6 @@
-// import "./style.css";
 import "./libraries/css-toggle-switch-master/dist/toggle-switch.css";
+import "./normalize.css";
+import "./styles.css";
 
 // document.querySelector("#app").innerHTML = `
 //   <h1>Hello Vite!</h1>
