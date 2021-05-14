@@ -47,6 +47,7 @@
         </div>
         <div class="widget-container-full">
           <!-- element line graph will attach to -->
+          <img src="./mockups/charts/line-chart.png" />
           <canvas id="traffic-chart"></canvas>
         </div>
       </section>
@@ -55,6 +56,7 @@
         <h3>Daily Traffic</h3>
         <div class="widget-container-half">
           <!-- element bar graph will attach to -->
+          <img src="mockups/charts/bar-chart.png" />
           <canvas id="daily-chart"></canvas>
         </div>
       </section>
@@ -63,6 +65,7 @@
         <h3>Mobile Users</h3>
         <div class="widget-container-half">
           <!-- element doughnut graph will attach to -->
+          <img src="mockups/charts/doughnut-chart.png" />
           <canvas id="mobile-chart"></canvas>
         </div>
       </section>
@@ -187,17 +190,28 @@
       <!-- local settings widget -------------------------------------->
       <section class="settings">
         <h3>Settings</h3>
-        <!-- custom CSS toggle code-->
-        <label class="switch-ios switch-light" onclick="">
-          <input type="checkbox" />
-          <p>Send Email Notifications</p>
-          <span>
-            <span>Off</span>
-            <span>On</span>
-            <a></a>
-          </span>
-        </label>
-        <!-- custom CSS toggle code fpr Set Profile to Public-->
+        <div class="email-settings">
+          <label class="switch-ios switch-light" onclick="">
+            <input type="checkbox" />
+            <p>Send Email Notifications</p>
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
+        <div class="profile-settings">
+          <label class="switch-ios switch-light" onclick="">
+            <input type="checkbox" />
+            <p>Set Profile to Public</p>
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
         <select class="form-field" id="timezone">
           <option disabled selected>Select a Timezone</option>
           <option>AEST</option>
