@@ -11,5 +11,25 @@ main {
 }
 
 /* mobile (320px) tablet (768px) desktop (1024px) */
+/* -- mobile -- */
 
-/* Use CSS grid to lay out the main elements (header, sidebar navigation, main content) on the page. */
+/* Do I need to define screen? */
+
+@media (min-width: 320px) {
+  .grid-container {
+    display: grid;
+  }
+}
+
+/* -- tablet -- */
+
+@media (min-width: 768px) {
+  body {
+  }
+}
+/* -- desktop -- */
+
+@media (min-width: 1024px) {
+  body {
+  }
+}
