@@ -1,4 +1,4 @@
-import "./style.css";
+// import "./style.css";
 import "./libraries/css-toggle-switch-master/dist/toggle-switch.css";
 
 // document.querySelector("#app").innerHTML = `

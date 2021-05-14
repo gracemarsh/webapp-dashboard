@@ -188,11 +188,23 @@
       <section class="settings">
         <h3>Settings</h3>
         <!-- custom CSS toggle code-->
-        <!-- custom CSS toggle code-->
+        <label class="switch-ios switch-light" onclick="">
+          <input type="checkbox" />
+          <p>Send Email Notifications</p>
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+        <!-- custom CSS toggle code fpr Set Profile to Public-->
         <select class="form-field" id="timezone">
           <option disabled selected>Select a Timezone</option>
-          <option>Eastern</option>
-          <!-- more options -------------------------------------->
+          <option>AEST</option>
+          <option>CET</option>
+          <option>GMT</option>
+          <option>MET</option>
+          <option>UTC</option>
         </select>
         <div class="settings-button">
           <button class="button-primary" id="save">Save</button>
