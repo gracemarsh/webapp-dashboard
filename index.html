@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>WebApp</title>
   </head>
-  <body>
+  <body id="app">
     <header>
       <h1></h1>
       <div title="bell">
@@ -22,10 +23,183 @@
       </a>
     </nav>
     <main>
-      <div id="app"></div>
-      <row>col 1</row>
-      <row>col 1, col 2, col 3</row>
+      <div class="main-header">
+        <h2 class="headline">Dashboard</h2>
+        <div class="main-header-search">
+          <input type="search" placeholder="Search..." />
+        </div>
+      </div>
+      <!-- alert banner -------------------------------------->
+      <div class="alert" id="alert">
+        <!-- JS will insert alert here -->
+      </div>
+
+      <!-- line graph charts -------------------------------------->
+      <section class="traffic">
+        <div class="traffic-header">
+          <h3>Traffic</h3>
+          <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+          </ul>
+        </div>
+        <div class="widget-container-full">
+          <!-- element line graph will attach to -->
+          <canvas id="traffic-chart"></canvas>
+        </div>
+      </section>
+      <!-- bar chart -------------------------------------->
+      <section class="daily">
+        <h3>Daily Traffic</h3>
+        <div class="widget-container-half">
+          <!-- element bar graph will attach to -->
+          <canvas id="daily-chart"></canvas>
+        </div>
+      </section>
+      <!-- doughnut chart -------------------------------------->
+      <section class="mobile">
+        <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+          <!-- element doughnut graph will attach to -->
+          <canvas id="mobile-chart"></canvas>
+        </div>
+      </section>
+      <!-- social stats -------------------------------------->
+      <section class="social-container">
+        <div class="social-image">
+          <svg></svg>
+        </div>
+        <div class="social-text">
+          <p>Facebook</p>
+          <p>10,320</p>
+        </div>
+        <div class="social-image">
+          <svg></svg>
+        </div>
+        <div class="social-text">
+          <p>Instagram</p>
+          <p>16,445</p>
+        </div>
+        <div class="social-image">
+          <svg></svg>
+        </div>
+        <div class="social-text">
+          <p>Twitter</p>
+          <p>22,189</p>
+        </div>
+      </section>
+      <!-- new members widget -------------------------------------->
+      <section class="members">
+        <h3>New Members</h3>
+        <div class="member-container">
+          <img src="" class="profile-pic" />
+          <div class="member-text">
+            <p class="name">AnnMarie Chambers</p>
+            <a href="#">AnnMarie.chambers850@gmail.com</a>
+          </div>
+          <p class="date">10/15/20</p>
+        </div>
+        <div class="member-container">
+          <img src="" class="profile-pic" />
+          <div class="member-text">
+            <p class="name">Tristan Byrd</p>
+            <a href="#">tristan.byrd52@gmail.com</a>
+          </div>
+          <p class="date">10/15/20</p>
+        </div>
+        <div class="member-container">
+          <img src="" class="profile-pic" />
+          <div class="member-text">
+            <p class="name">Tessa Wood</p>
+            <a href="#">tessa.wood16@gmail.com</a>
+          </div>
+          <p class="date">10/15/20</p>
+        </div>
+        <div class="member-container">
+          <img src="" class="profile-pic" />
+          <div class="member-text">
+            <p class="name">Nick Olliver</p>
+            <a href="#">nick.oliver82@gmail.com</a>
+          </div>
+          <p class="date">09/15/20</p>
+        </div>
+      </section>
+      <!-- recent activity widget -------------------------------------->
+      <section class="recent-activity">
+        <h3>Recent Activity</h3>
+        <div class="activity-container">
+          <img src="#" class="profile-pic" />
+          <div class="member-text">
+            <p>
+              AnnMarie Chambers commented on <strong>WebApp's SEO Tips</strong>
+            </p>
+            <p>4 hours ago</p>
+          </div>
+        </div>
+        <div class="activity-container">
+          <img src="#" class="profile-pic" />
+          <div class="member-text">
+            <p>
+              Tristan Byrd liked the post
+              <strong>Facebook's Changes for 2021</strong>
+            </p>
+            <p>5 hours ago</p>
+          </div>
+        </div>
+        <div class="activity-container">
+          <img src="#" class="profile-pic" />
+          <div class="member-text">
+            <p>
+              Tessa Wood commented on
+              <strong>Facebook's Changes for 2021</strong>
+            </p>
+            <p>5 hours ago</p>
+          </div>
+        </div>
+        <div class="activity-container">
+          <img src="#" class="profile-pic" />
+          <div class="member-text">
+            <p>Nick Oliver posted <strong>WebApp's SEO Tips</strong></p>
+            <p>1 day ago</p>
+          </div>
+        </div>
+      </section>
+      <!-- messaging widget -------------------------------------->
+      <section class="message">
+        <h3>Message User</h3>
+        <form class="widget-container">
+          <input
+            type="text"
+            placeholder="Search for user"
+            class="form-field"
+            id="userField"
+          />
+          <textarea
+            placeholder="Message for user"
+            class="form-area"
+            id="messageField"
+          ></textarea>
+          <button class="button-primary" id="send">Send</button>
+        </form>
+      </section>
+      <!-- local settings widget -------------------------------------->
+      <section class="settings">
+        <h3>Settings</h3>
+        <!-- custom CSS toggle code-->
+        <!-- custom CSS toggle code-->
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+          <option>Eastern</option>
+          <!-- more options -------------------------------------->
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
+      </section>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
