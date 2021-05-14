@@ -8,7 +8,7 @@
 } */
 
 /* -- MAIN STYLES ------------------------------------------------- */
-.grid-container {
+#app {
   max-width: 320px;
   display: grid;
 }
@@ -18,6 +18,29 @@ header {
   display: flex;
   padding: 15px;
 }
+nav {
+  background-color: rgb(60, 58, 95);
+}
+.traffic-nav {
+  list-style-type: none;
+  display: flex;
+}
+.traffic-nav li {
+  width: 100px;
+}
+
+/* -- PAGE LINES ------------------------------------------------- */
+.traffic,
+.daily,
+.mobile,
+.social-container,
+.member-container,
+.activity-container,
+.message {
+  border-bottom: 1px solid grey;
+}
+
+/* -- IMAGE STYLES ------------------------------------------------- */
 #notifications-bell {
   max-width: 35px;
   border-right: 1px solid grey;
@@ -29,26 +52,18 @@ header {
   height: 60px;
   padding: 15px;
 }
-nav {
-  background-color: rgb(60, 58, 95);
-}
-
-.traffic-nav {
-  list-style-type: none;
-  display: flex;
-}
-.traffic-nav li {
-  width: 100px;
-}
-
+/* how to make svg's white in color? */
 nav a img {
-  max-width: 25px;
+  max-width: 35px;
   fill: white;
   display: inline-flex;
-
-  /* how to make svg's white in color? */
 }
-
+.social-image {
+  max-width: 50px;
+  background-color: rgb(97, 97, 177);
+  border-radius: 50%;
+  padding: 15px;
+}
 /* -- FONTS ------------------------------------------------- */
 body {
   font-family: "Open Sans", sans-serif;
@@ -58,6 +73,42 @@ h1 {
 }
 h2 {
   font-weight: 400;
+}
+h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+h4 {
+  color: rgb(97, 97, 177);
+  font-weight: 500;
+  font-size: 18px;
+}
+.stat {
+  font-size: 35px;
+  color: rgb(92, 92, 92);
+}
+
+/* -- SOCIAL STATS SECTION ------------------------------------------------- */
+.indiv-social-container {
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+/* -- BUTTONS ------------------------------------------------- */
+
+button {
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(97, 97, 177);
+  border: none;
+  padding: 15px 80px;
+  border-radius: 10px;
+}
+#cancel {
+  background-color: grey;
 }
 
 /* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
