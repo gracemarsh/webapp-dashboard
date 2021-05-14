@@ -5,21 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>WebApp</title>
   </head>
   <body id="app" class="grid-container">
     <header>
-      <h1></h1>
-      <div title="bell">
-        <svg></svg>
-        <div id="notifications"></div>
+      <h1><strong>Web</strong>App™</h1>
+      <div title="bell" id="notifications">
+        <img id="notifications" src="/svgs/bell.svg" />
       </div>
-      <img />
-      <h3></h3>
+      <img class="profile-pic" src="images/member-1.jpg" />
+      <h3>Grace Marsh</h3>
     </header>
     <nav>
       <a>
-        <img />
+        <img src="svgs/home.svg" alt="home icon" />
+      </a>
+      <a>
+        <img src="svgs/bar-chart.svg" alt="bar chart icon" />
+      </a>
+      <a>
+        <img src="svgs/members.svg" alt="members icon" />
+      </a>
+      <a>
+        <img src="svgs/settings.svg" alt="settings icon" />
       </a>
     </nav>
     <main>
@@ -97,34 +110,42 @@
       <section class="members">
         <h3>New Members</h3>
         <div class="member-container">
-          <img src="" class="profile-pic" />
+          <img src="/images/member-1.jpg" class="profile-pic" />
           <div class="member-text">
-            <p class="name">AnnMarie Chambers</p>
-            <a href="#">AnnMarie.chambers850@gmail.com</a>
+            <p class="name">Grace Marsh</p>
+            <a href="mailto:grace.marsh850@gmail.com?subject=Hi Grace!"
+              >grace.marsh850@gmail.com</a
+            >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="" class="profile-pic" />
+          <img src="/images/member-2.jpg" class="profile-pic" />
           <div class="member-text">
             <p class="name">Tristan Byrd</p>
-            <a href="#">tristan.byrd52@gmail.com</a>
+            <a href="mailto:tristan.byrd52@gmail.com?subject=Hi Tristan!"
+              >tristan.byrd52@gmail.com</a
+            >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="" class="profile-pic" />
+          <img src="/images/member-3.jpg" class="profile-pic" />
           <div class="member-text">
             <p class="name">Tessa Wood</p>
-            <a href="#">tessa.wood16@gmail.com</a>
+            <a href="mailto:tessa.wood16@gmail.com?subject=Hi Tessa!"
+              >tessa.wood16@gmail.com</a
+            >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="" class="profile-pic" />
+          <img src="/images/member-4.jpg" class="profile-pic" />
           <div class="member-text">
             <p class="name">Nick Olliver</p>
-            <a href="#">nick.oliver82@gmail.com</a>
+            <a href="mailto:nick.oliver82@gmail.com?subject=Hi Nick!"
+              >nick.oliver82@gmail.com</a
+            >
           </div>
           <p class="date">09/15/20</p>
         </div>
@@ -133,16 +154,14 @@
       <section class="recent-activity">
         <h3>Recent Activity</h3>
         <div class="activity-container">
-          <img src="#" class="profile-pic" />
+          <img src="/images/member-1.jpg" class="profile-pic" />
           <div class="member-text">
-            <p>
-              AnnMarie Chambers commented on <strong>WebApp's SEO Tips</strong>
-            </p>
+            <p>Grace Marsh commented on <strong>WebApp's SEO Tips</strong></p>
             <p>4 hours ago</p>
           </div>
         </div>
         <div class="activity-container">
-          <img src="#" class="profile-pic" />
+          <img src="/images/member-2.jpg" class="profile-pic" />
           <div class="member-text">
             <p>
               Tristan Byrd liked the post
@@ -152,7 +171,7 @@
           </div>
         </div>
         <div class="activity-container">
-          <img src="#" class="profile-pic" />
+          <img src="/images/member-3.jpg" class="profile-pic" />
           <div class="member-text">
             <p>
               Tessa Wood commented on
@@ -162,7 +181,7 @@
           </div>
         </div>
         <div class="activity-container">
-          <img src="#" class="profile-pic" />
+          <img src="/images/member-4.jpg" class="profile-pic" />
           <div class="member-text">
             <p>Nick Oliver posted <strong>WebApp's SEO Tips</strong></p>
             <p>1 day ago</p>

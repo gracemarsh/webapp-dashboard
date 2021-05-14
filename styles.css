@@ -1,35 +1,66 @@
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
+
+/* -- MAIN STYLES ------------------------------------------------- */
+
 main {
   color: rgb(6, 52, 80);
 }
 
-/* mobile (320px) tablet (768px) desktop (1024px) */
-/* -- mobile -- */
-
-/* Do I need to define screen? */
-
-@media (min-width: 320px) {
-  .grid-container {
-    display: grid;
-  }
+.grid-container {
+  max-width: 320px;
+  display: grid;
 }
 
-/* -- tablet -- */
-
-@media (min-width: 768px) {
-  body {
-  }
+header {
+  background-color: rgb(97, 97, 177);
+  color: white;
+  display: flex;
 }
-/* -- desktop -- */
-
-@media (min-width: 1024px) {
-  body {
-  }
+.profile-pic {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
+nav {
+  background-color: rgb(60, 58, 95);
+  display: flex;
+}
+
+.traffic-nav {
+  list-style-type: none;
+  display: flex;
+}
+.traffic-nav li {
+  width: 100px;
+}
+
+#notifications {
+  max-width: 25px;
+}
+nav a img {
+  max-width: 25px;
+  fill: white;
+  /* how to make svg's white in color? */
+}
+
+/* -- FONTS ------------------------------------------------- */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-weight: 300;
+}
+h2 {
+}
+
+/* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
+/* -- MOBILE ------------------------------------------------- */
+
+/* @media (min-width: 320px) {} */
