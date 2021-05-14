@@ -8,29 +8,29 @@
 } */
 
 /* -- MAIN STYLES ------------------------------------------------- */
-
-main {
-  color: rgb(6, 52, 80);
-}
-
 .grid-container {
   max-width: 320px;
   display: grid;
 }
-
 header {
   background-color: rgb(97, 97, 177);
   color: white;
   display: flex;
+  padding: 15px;
+}
+#notifications-bell {
+  max-width: 35px;
+  border-right: 1px solid grey;
+  padding: 0 15px;
 }
 .profile-pic {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  padding: 15px;
 }
 nav {
   background-color: rgb(60, 58, 95);
-  display: flex;
 }
 
 .traffic-nav {
@@ -41,12 +41,11 @@ nav {
   width: 100px;
 }
 
-#notifications {
-  max-width: 25px;
-}
 nav a img {
   max-width: 25px;
   fill: white;
+  display: inline-flex;
+
   /* how to make svg's white in color? */
 }
 
@@ -58,6 +57,7 @@ h1 {
   font-weight: 300;
 }
 h2 {
+  font-weight: 400;
 }
 
 /* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
