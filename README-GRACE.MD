@@ -30,6 +30,8 @@ Open up the `package.json` then look at the entries under `scripts`.
 
 The `keys` are commands you can provide to `npm`, the values are the command `npm` will run "under the hood".
 
+<!-- DO THIS AFTER IT'S SET UP TO GET THE WEBPAGE LINK -->
+
 ```BASH
 npm run dev
 ```

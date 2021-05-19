@@ -1,17 +1,31 @@
 /* -- MAIN STYLES ------------------------------------------------- */
 #app {
   max-width: 320px;
-  display: grid;
 }
+
+#app * {
+  margin: 0;
+}
+
+header,
+main,
+nav {
+  padding: 15px;
+}
+
 header {
   background-color: rgb(97, 97, 177);
   color: white;
   display: flex;
-  padding: 15px;
+  max-height: 31px;
 }
+
 nav {
   background-color: rgb(60, 58, 95);
+  max-height: 20px;
+  display: flex;
 }
+
 .traffic-nav {
   list-style-type: none;
   display: flex;
@@ -33,9 +47,15 @@ nav {
 
 /* -- IMAGE STYLES ------------------------------------------------- */
 #notifications-bell {
-  max-width: 35px;
+  max-width: 20px;
   border-right: 1px solid grey;
-  padding: 0 15px;
+  padding: 0 10px;
+}
+#nav-pic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0 10px;
 }
 .profile-pic {
   border-radius: 50%;
@@ -45,9 +65,10 @@ nav {
 }
 /* how to make svg's white in color? */
 nav a img {
-  max-width: 35px;
+  width: 35px;
+
   fill: white;
-  display: inline-flex;
+  padding: 0 17px;
 }
 .social-image {
   max-width: 50px;
@@ -61,6 +82,7 @@ body {
 }
 h1 {
   font-weight: 300;
+  font-size: 20px;
 }
 h2 {
   font-weight: 400;
@@ -73,6 +95,11 @@ h4 {
   color: rgb(97, 97, 177);
   font-weight: 500;
   font-size: 18px;
+}
+h5 {
+  font-weight: 100;
+  font-size: 12px;
+  padding-top: 10px;
 }
 .stat {
   font-size: 35px;
