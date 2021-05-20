@@ -5,11 +5,6 @@
   margin: 0;
 }
 
-/* figure out how to fix this girl! Does the * selector not allow me to make any chnages to margin thereafter? */
-#app * {
-  margin: 0;
-}
-
 header,
 main {
   padding: 5px;
@@ -83,11 +78,14 @@ h5 {
 }
 
 /* -- IMAGE STYLES ------------------------------------------------- */
-#notifications-bell {
-  max-width: 22px;
+.bell {
+  height: 30px;
+  width: 30px;
   border-right: 1px solid grey;
+  fill: white;
   padding: 0 10px;
 }
+
 #nav-pic {
   border-radius: 50%;
   width: 40px;
