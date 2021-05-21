@@ -125,7 +125,7 @@ p {
 
 #nav-pic {
   border-radius: 50%;
-  width: 35xpx;
+  width: 35px;
   height: 35px;
   margin: 0 5px;
 }
@@ -293,8 +293,38 @@ button {
   width: 47%;
 }
 
-/* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
-/* -- MOBILE ------------------------------------------------- */
-
+/* Do I need to define screen???? */
+/* -- TABLET ------------------------------------------------- */
 @media (min-width: 768px) {
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: nav;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main {
+    grid-area: main;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    height: 100vh;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .mobile {
+    border-left: 1px solid rgb(201, 201, 201);
+  }
+}
+/* -- DESKTOP ------------------------------------------------- */
+@media (min-width: 1024px) {
 }
