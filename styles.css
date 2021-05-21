@@ -298,6 +298,7 @@ button {
 @media (min-width: 768px) {
   header {
     grid-area: header;
+    height: 77px;
   }
   nav {
     grid-area: nav;
@@ -308,7 +309,6 @@ button {
   main {
     grid-area: main;
   }
-
   body {
     display: grid;
     grid-template-columns: 70px 1fr;
@@ -317,10 +317,25 @@ button {
       "header header"
       "nav main";
   }
+  .nav-icon {
+    height: 40px;
+    margin-top: 25px;
+  }
+  .traffic-nav {
+    justify-content: flex-end;
+  }
+  .traffic-nav-link {
+    padding-left: 25px;
+  }
+  /* why doesn't this work?!?!?!??!!?!?  I can't get it to stretch all the way across */
+  .charts {
+    width: 100%;
+  }
   .charts,
   .social-flex-container {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
   .social-flex-container {
     grid-gap: 8px;
@@ -341,10 +356,12 @@ button {
     text-align: right;
     flex-grow: 1;
   }
-  /* .settings-container p {
-    flex-grow: -1;
-  } */
+  /* how to get the span buttons to the left?     justify-content: flex-start;*/
 }
 /* -- DESKTOP ------------------------------------------------- */
 @media (min-width: 1024px) {
+  .charts {
+    height: 18rem;
+    width: 100%;
+  }
 }
