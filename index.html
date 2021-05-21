@@ -10,8 +10,8 @@
       rel="stylesheet"
     />
     <title>WebApp</title>
-  <script type="module" crossorigin src="/webapp-dashboard/assets/index.9f47e24d.js"></script>
-  <link rel="stylesheet" href="/webapp-dashboard/assets/index.83eed622.css">
+  <script type="module" crossorigin src="/webapp-dashboard/assets/index.9976a361.js"></script>
+  <link rel="stylesheet" href="/webapp-dashboard/assets/index.e3f3aafa.css">
 </head>
   <body id="app" class="grid-container">
     <header>
@@ -300,6 +300,7 @@
             placeholder="Message for user"
             class="form-field"
             id="messageField"
+            4
           ></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>
@@ -307,22 +308,24 @@
       <!-- local settings widget -------------------------------------->
       <section class="settings">
         <h3>Settings</h3>
+
         <div class="email-settings">
-          <label class="switch-ios switch-light" onclick="">
-            <input type="checkbox" />
+          <label class="settings-container switch-ios switch-light" onclick="">
             <p>Send Email Notifications</p>
-            <span>
+            <input type="checkbox" />
+            <span id="span-container-1">
               <span>Off</span>
               <span>On</span>
               <a></a>
             </span>
           </label>
         </div>
+
         <div class="profile-settings">
-          <label class="switch-ios switch-light" onclick="">
+          <label class="settings-container switch-ios switch-light" onclick="">
             <input type="checkbox" />
             <p>Set Profile to Public</p>
-            <span>
+            <span id="span-container-2">
               <span>Off</span>
               <span>On</span>
               <a></a>
