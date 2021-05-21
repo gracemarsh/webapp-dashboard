@@ -293,9 +293,9 @@ button {
   width: 47%;
 }
 
-/* Do I need to define screen???? */
 /* -- TABLET ------------------------------------------------- */
 @media (min-width: 768px) {
+  /* STRUCTURE */
   header {
     grid-area: header;
     height: 77px;
@@ -331,6 +331,9 @@ button {
   .charts {
     width: 100%;
   }
+  .charts section {
+    flex-grow: 1;
+  }
   .charts,
   .social-flex-container {
     display: flex;
@@ -364,4 +367,12 @@ button {
     height: 18rem;
     width: 100%;
   }
+}
+
+/* think about making the nav bar "sticky" */
+
+/* customise switch library */
+.switch-ios.switch-light a {
+  top: 4px;
+  left: 4px;
 }
