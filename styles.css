@@ -1,4 +1,8 @@
 /* -- MAIN STYLES ------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
 #app {
   max-width: 100%;
   color: #616060;
@@ -33,10 +37,9 @@ nav {
 #dashboard {
   background-color: white;
   width: 100px;
-  height: 38px;
+  height: 50px;
   border-right: 1px solid rgb(200, 200, 200);
   border-bottom: 1px solid white;
-  padding-top: 13px 0;
   text-align: center;
 }
 #search-input {
@@ -93,7 +96,8 @@ h5 {
 }
 p {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.2;
 }
 .traffic-nav-link {
   font-size: 14px;
@@ -106,29 +110,29 @@ p {
 
 /* -- IMAGE STYLES ------------------------------------------------- */
 .bell {
-  height: 30px;
+  height: 23px;
   width: 30px;
   border-right: 1px solid grey;
   fill: white;
-  padding: 0 10px;
+  padding-right: 8px;
 }
 .nav-icon {
   width: 32px;
   fill: white;
-  padding: 0 15px;
+  margin: 0 1rem;
 }
 
 #nav-pic {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 0 10px;
+  width: 35xpx;
+  height: 35px;
+  margin: 0 5px;
 }
 .profile-pic {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  padding: 15px;
+  margin: 1rem 0 5px;
 }
 
 #line-graph,
@@ -149,12 +153,17 @@ canvas {
 .social-media-icon {
   width: 30px;
   height: 30px;
-  padding: 14px;
   fill: white;
 }
 .social-image {
   background-color: rgb(97, 97, 177);
   border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
 }
 .social-container {
   display: flex;
@@ -163,7 +172,7 @@ canvas {
 .indiv-social-container {
   display: flex;
   align-items: center;
-  height: 75px;
+  height: 90px;
   max-width: 300px;
   padding: 10px;
   margin: 8px 0;
@@ -215,7 +224,7 @@ a {
 .form-field {
   width: 100%;
   height: 40px;
-  padding-left: 5px;
+  padding-left: 10px;
   margin-top: 15px;
   background-color: rgb(242, 242, 242);
   border: 1px solid rgb(214, 214, 214);
@@ -223,27 +232,35 @@ a {
 }
 ::placeholder {
   color: rgb(179, 179, 179);
+  font-size: 14px;
 }
 #messageField {
   height: 110px;
+  padding-top: 10px;
 }
 /* -- BUTTONS ------------------------------------------------- */
 
 button {
   width: 100%;
+  height: 40px;
   color: white;
   text-transform: uppercase;
   background-color: rgb(97, 97, 177);
   border: none;
-  padding: 15px 80px;
   border-radius: 5px;
-  margin: 15px 0;
+  margin: 10px 0;
+  font-weight: 100;
 }
 #cancel {
   background-color: grey;
 }
 
+span {
+  width: 20px;
+}
 /* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
 /* -- MOBILE ------------------------------------------------- */
 
 /* @media (min-width: 320px) {} */
+
+/* switch flex label OR set span width to ~ 100px */
