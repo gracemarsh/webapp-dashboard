@@ -55,7 +55,6 @@ nav {
 
 /* -- PAGE LINES ------------------------------------------------- */
 section {
-  /* IS MY PADDING DOING THE RIGHT THING HERE? SOCIAL STATS LOOKS UNCENTERED AND WEIRD */
   padding: 0 1rem 1rem 1rem;
   border-bottom: 1px solid rgb(201, 201, 201);
 }
@@ -107,7 +106,9 @@ p {
   font-weight: 100;
   margin: 0;
 }
-
+.settings p {
+  font-size: 14px;
+}
 /* -- IMAGE STYLES ------------------------------------------------- */
 .bell {
   height: 23px;
@@ -230,6 +231,8 @@ a {
   border: 1px solid rgb(214, 214, 214);
   border-radius: 5px;
 }
+/* how to change little purple arrow selector???? */
+
 ::placeholder,
 #timezone {
   color: rgb(179, 179, 179);
@@ -251,6 +254,7 @@ button {
   border-radius: 5px;
   margin: 10px 0;
   font-weight: 100;
+  font-size: 15px;
 }
 #cancel {
   background-color: grey;
@@ -260,27 +264,30 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 15px 0;
 }
 .settings-container p {
   flex-grow: 1;
 }
-#span-container-1 span,
-#span-container-2 span {
-  color: white;
-}
+/* Still don't know how to vertically center align the toggle switch white circle. Also don't know how to change toggle switch colour*/
 #span-container-1,
 #span-container-2 {
   width: 90px;
-  height: 33px;
+  height: 35px;
   border: 2px solid rgb(214, 214, 214);
   background-color: rgb(97, 97, 177);
+}
+#span-container-1 span,
+#span-container-2 span {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 15px;
 }
 .settings-button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
 }
 .settings-button button {
   width: 47%;
@@ -289,6 +296,5 @@ button {
 /* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
 /* -- MOBILE ------------------------------------------------- */
 
-/* @media (min-width: 320px) {} */
-
-/* switch flex label OR set span width to ~ 100px */
+@media (min-width: 768px) {
+}
