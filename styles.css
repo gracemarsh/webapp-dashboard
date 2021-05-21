@@ -230,7 +230,8 @@ a {
   border: 1px solid rgb(214, 214, 214);
   border-radius: 5px;
 }
-::placeholder {
+::placeholder,
+#timezone {
   color: rgb(179, 179, 179);
   font-size: 14px;
 }
@@ -254,10 +255,37 @@ button {
 #cancel {
   background-color: grey;
 }
-
-span {
-  width: 20px;
+/* -- SETTINGS ------------------------------------------------- */
+.settings-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+.settings-container p {
+  flex-grow: 1;
+}
+#span-container-1 span,
+#span-container-2 span {
+  color: white;
+}
+#span-container-1,
+#span-container-2 {
+  width: 90px;
+  height: 33px;
+  border: 2px solid rgb(214, 214, 214);
+  background-color: rgb(97, 97, 177);
+}
+.settings-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.settings-button button {
+  width: 47%;
+}
+
 /* mobile (320px) tablet (768px) desktop (1024px) Do I need to define screen???? */
 /* -- MOBILE ------------------------------------------------- */
 
