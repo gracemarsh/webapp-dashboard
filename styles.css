@@ -311,19 +311,39 @@ button {
 
   body {
     display: grid;
-    grid-template-columns: 10% 1fr;
+    grid-template-columns: 70px 1fr;
     height: 100vh;
     grid-template-areas:
       "header header"
       "nav main";
   }
-  .flex-container {
+  .charts,
+  .social-flex-container {
     display: flex;
     flex-direction: row;
+  }
+  .social-flex-container {
+    grid-gap: 8px;
+    justify-content: space-between;
   }
   .mobile {
     border-left: 1px solid rgb(201, 201, 201);
   }
+  .member-container,
+  .activity-container {
+    flex-direction: row;
+  }
+  .name,
+  .activity-container p {
+    text-align: left;
+  }
+  .date {
+    text-align: right;
+    flex-grow: 1;
+  }
+  /* .settings-container p {
+    flex-grow: -1;
+  } */
 }
 /* -- DESKTOP ------------------------------------------------- */
 @media (min-width: 1024px) {
