@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-
 #app {
   max-width: 100%;
   color: #616060;
@@ -264,7 +263,7 @@ button {
 }
 /* -- SETTINGS ------------------------------------------------- */
 .settings-container {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   padding: 15px 0;
@@ -334,11 +333,13 @@ Also don't know how to change toggle switch colour*/
   /* why doesn't this work?!?!?!??!!?!?  I can't get it to stretch all the way across */
   .charts {
     width: 100%;
+    display: flex;
   }
+
   .charts section {
     flex-grow: 1;
   }
-  .charts,
+  /* .charts, */
   .social-flex-container {
     display: flex;
     flex-direction: row;
@@ -382,11 +383,8 @@ Also don't know how to change toggle switch colour*/
   .social {
     grid-area: social;
   }
-  .daily {
-    grid-area: daily;
-  }
-  .mobile {
-    grid-area: mobile;
+  .charts {
+    grid-area: charts;
   }
   .social-container {
     grid-area: social;
@@ -409,7 +407,7 @@ Also don't know how to change toggle switch colour*/
     grid-template-areas:
       "dashboard dashboard"
       "traffic traffic"
-      "daily mobile"
+      "charts charts"
       "social social"
       "members activity"
       "message settings";
@@ -425,6 +423,10 @@ Also don't know how to change toggle switch colour*/
     width: 200px;
   }
 
+  .members,
+  .message {
+    border-right: 1px solid rgb(200, 200, 200);
+  }
   /* customise switch library */
   .switch-ios.switch-light a {
     top: 4px;
