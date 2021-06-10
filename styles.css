@@ -32,6 +32,7 @@ nav {
 .headline {
   background-color: rgb(245, 245, 245);
   height: 50px;
+  width: 100%;
   border-bottom: 1px solid rgb(200, 200, 200);
 }
 #dashboard {
@@ -314,7 +315,7 @@ Also don't know how to change toggle switch colour*/
   }
   body {
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 55px 1fr;
     height: 100vh;
     grid-template-areas:
       "header header"
@@ -347,6 +348,8 @@ Also don't know how to change toggle switch colour*/
     grid-gap: 8px;
     justify-content: space-between;
   }
+  /* STYLING */
+
   .mobile {
     border-left: 1px solid rgb(201, 201, 201);
   }
@@ -366,10 +369,52 @@ Also don't know how to change toggle switch colour*/
   /* How to add the little arrows on the RHS Recent Activity */
   /* How come my settings switches are sensitive to clicks across the entire span? */
   /* Make the nav bar "sticky" */
-
 }
 /* -- DESKTOP ------------------------------------------------- */
 @media (min-width: 1024px) {
+  /* STRUCTURE */
+  .main-header {
+    grid-area: dashboard;
+  }
+  .traffic {
+    grid-area: traffic;
+  }
+  .social {
+    grid-area: social;
+  }
+  .daily {
+    grid-area: daily;
+  }
+  .mobile {
+    grid-area: mobile;
+  }
+  .social-container {
+    grid-area: social;
+  }
+  .members {
+    grid-area: members;
+  }
+  .recent-activity {
+    grid-area: activity;
+  }
+  .message {
+    grid-area: message;
+  }
+  .settings {
+    grid-area: settings;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "dashboard dashboard"
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "members activity"
+      "message settings";
+  }
+  /* STYLING */
   .charts {
     height: 18rem;
     width: 100%;
@@ -377,31 +422,18 @@ Also don't know how to change toggle switch colour*/
 
   .settings-container p {
     flex-grow: 0;
-    width:200px;
-}
+    width: 200px;
+  }
 
-
-/* customise switch library */
-.switch-ios.switch-light a {
-  top: 4px;
-  left: 4px;
+  /* customise switch library */
+  .switch-ios.switch-light a {
+    top: 4px;
+    left: 4px;
+  }
 }
-
-/* STRUCTURE */
-.members {
-  grid-area: members;
-}
-.recent-activity {
-  grid-area: recent-activity;
-}
-.message {
-  grid-area: message;
-}
-.settings {
-  grid-area: settings;
-}
-
 @media (min-width: 1250px) {
+  /* STYLING */
   .indiv-social-container {
     justify-content: center;
+  }
 }
