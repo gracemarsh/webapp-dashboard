@@ -1,23 +1,3 @@
-/* -- TICKETS ------------------------------------------------- */
-/* MOBILE: 
-Bell: need a green alert?
-Message User: make a minimum size for the "message for user box";
-Settings Section: Off & On swtich Right aligned;
-Change timezone select button to purple arrow;
-*/
-/* TABLET: 
-BOXING IS ALL WRONG 
-Recent Activity: Need purple arrows on right hand side;
-Settings Section: Off & On swtich aligned;
-Change timezone select button to purple arrow;
-*/
-
-/* DESKTOP:
-BOXING ALL WRONG
-New Members & Recent Activity: inc font size
-Incr Nav bar size
-*/
-
 /* -- MAIN STYLES ------------------------------------------------- */
 * {
   box-sizing: border-box;
@@ -72,7 +52,10 @@ nav {
   justify-content: space-evenly;
   padding: 0;
 }
-
+.switch-ios.switch-light a {
+  top: 3px;
+  left: 3px;
+}
 /* -- PAGE LINES ------------------------------------------------- */
 section {
   padding: 0 1rem 1rem 1rem;
@@ -133,21 +116,34 @@ p {
 .bell {
   height: 23px;
   width: 30px;
-  border-right: 1px solid grey;
   fill: white;
-  padding-right: 8px;
+}
+.bell-notification {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(132, 249, 120);
+  border-radius: 100%;
+  position: relative;
+  top: -10px;
+  left: -6px;
+}
+.separating-line{
+  height: 37px;
+  background-color: grey;
+  width: 1px;
+  margin: 0 5px;
 }
 .nav-icon {
   width: 32px;
   fill: white;
   margin: 0 1rem;
 }
-
 #nav-pic {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin: 0 5px;
+  
 }
 .profile-pic {
   border-radius: 50%;
@@ -259,10 +255,30 @@ a {
   color: rgb(179, 179, 179);
   font-size: 14px;
 }
+
+#timezone{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.timezone-wrapper{
+  position: relative;
+}
+
+.timezone-wrapper::after{
+  content: "▾";
+  color: rgb(97, 97, 177);
+  font-size: 20px;
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  pointer-events: none;
+}
+
 #messageField {
   height: 110px;
   padding-top: 10px;
-  max-width: 100%;
+  resize: vertical;
 }
 /* -- BUTTONS ------------------------------------------------- */
 
@@ -287,6 +303,7 @@ button {
   flex-direction: row;
   align-items: center;
   padding: 15px 0;
+  width: 100%;
 }
 .settings-container p {
   flex-grow: 1;
@@ -377,11 +394,24 @@ Also don't know how to change toggle switch colour*/
   .member-container,
   .activity-container {
     flex-direction: row;
+    position: relative;
   }
   .name,
   .activity-container p {
     text-align: left;
   }
+    
+/* parent (container) position: relative, and then child (the "::after objct" is positioned absolutely */
+  .activity-container::after{
+    content: "˲";
+    color: rgb(97, 97, 177);
+    font-size: 35px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+
   .date {
     text-align: right;
     flex-grow: 1;
@@ -432,25 +462,29 @@ Also don't know how to change toggle switch colour*/
       "members activity"
       "message settings";
   }
+  body {
+    grid-template-columns: 60px 1fr;
+  }
   /* STYLING */
+  p, a {
+    font-size: 14px;
+  }
   .charts {
     height: 18rem;
     width: 100%;
   }
-
   .settings-container p {
     flex-grow: 0;
     width: 200px;
   }
-
   .members,
   .message {
     border-right: 1px solid rgb(200, 200, 200);
   }
   /* customise switch library */
   .switch-ios.switch-light a {
-    top: 4px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
   }
 }
 @media (min-width: 1250px) {

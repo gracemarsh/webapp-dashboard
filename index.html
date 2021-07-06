@@ -25,7 +25,8 @@
       <svg class="bell">
         <use xlink:href="#bell-icon" />
       </svg>
-
+      <div class="bell-notification"></div>
+      <div class="separating-line"></div>
       <img id="nav-pic" src="images/member-1.jpg" />
       <h5>Grace Marsh</h5>
     </header>
@@ -333,14 +334,16 @@
             </span>
           </label>
         </div>
-        <select class="form-field" id="timezone">
-          <option disabled selected>Select a Timezone</option>
-          <option>AEST</option>
-          <option>CET</option>
-          <option>GMT</option>
-          <option>MET</option>
-          <option>UTC</option>
-        </select>
+        <div class="timezone-wrapper">
+          <select class="form-field" id="timezone">
+            <option disabled selected>Select a Timezone</option>
+            <option>AEST</option>
+            <option>CET</option>
+            <option>GMT</option>
+            <option>MET</option>
+            <option>UTC</option>
+          </select>
+         </div>
         <div class="settings-button">
           <button class="button-primary" id="save">Save</button>
           <button class="button-disabled" id="cancel">Cancel</button>
