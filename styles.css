@@ -1,3 +1,23 @@
+/* -- TICKETS ------------------------------------------------- */
+/* MOBILE: 
+Bell: need a green alert?
+Message User: make a minimum size for the "message for user box";
+Settings Section: Off & On swtich Right aligned;
+Change timezone select button to purple arrow;
+*/
+/* TABLET: 
+BOXING IS ALL WRONG 
+Recent Activity: Need purple arrows on right hand side;
+Settings Section: Off & On swtich aligned;
+Change timezone select button to purple arrow;
+*/
+
+/* DESKTOP:
+BOXING ALL WRONG
+New Members & Recent Activity: inc font size
+Incr Nav bar size
+*/
+
 /* -- MAIN STYLES ------------------------------------------------- */
 * {
   box-sizing: border-box;
