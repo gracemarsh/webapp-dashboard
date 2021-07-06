@@ -10,8 +10,8 @@
       rel="stylesheet"
     />
     <title>WebApp</title>
-  <script type="module" crossorigin src="/webapp-dashboard/assets/index.4e8099f6.js"></script>
-  <link rel="stylesheet" href="/webapp-dashboard/assets/index.b992181e.css">
+  <script type="module" crossorigin src="/webapp-dashboard/assets/index.b920b53e.js"></script>
+  <link rel="stylesheet" href="/webapp-dashboard/assets/index.8c1375d9.css">
 </head>
   <body id="app" class="grid-container">
     <header>
@@ -27,7 +27,8 @@
       <svg class="bell">
         <use xlink:href="#bell-icon" />
       </svg>
-
+      <div class="bell-notification"></div>
+      <div class="separating-line"></div>
       <img id="nav-pic" src="/webapp-dashboard/assets/member-1.cfb2533f.jpg" />
       <h5>Grace Marsh</h5>
     </header>
@@ -102,11 +103,11 @@
           />
         </section> -->
       </div>
-      <!-- alert banner -------------------------------------->
+      <!-- alert banner 
       <div class="alert" id="alert">
-        <!-- JS will insert alert here -->
+        JS will insert alert here 
       </div>
-
+-->
       <!-- line graph charts -------------------------------------->
       <section class="traffic">
         <div class="traffic-header">
@@ -335,14 +336,16 @@
             </span>
           </label>
         </div>
-        <select class="form-field" id="timezone">
-          <option disabled selected>Select a Timezone</option>
-          <option>AEST</option>
-          <option>CET</option>
-          <option>GMT</option>
-          <option>MET</option>
-          <option>UTC</option>
-        </select>
+        <div class="timezone-wrapper">
+          <select class="form-field" id="timezone">
+            <option disabled selected>Select a Timezone</option>
+            <option>AEST</option>
+            <option>CET</option>
+            <option>GMT</option>
+            <option>MET</option>
+            <option>UTC</option>
+          </select>
+         </div>
         <div class="settings-button">
           <button class="button-primary" id="save">Save</button>
           <button class="button-disabled" id="cancel">Cancel</button>
