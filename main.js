@@ -18,6 +18,7 @@ function addNotification() {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
       alertBanner.style.display = "none";
+      document.getElementById("bell-notification").style.display = "none";
     }
     let msg = new SpeechSynthesisUtterance();
     msg.text = "Alert deleted.";
