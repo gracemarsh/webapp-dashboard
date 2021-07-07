@@ -56,7 +56,7 @@ Building creates an optimised, fast version of the app from your source files. T
 
 https://vitejs.dev/guide/static-deploy.html
 
-There are number of optons such as [Github Pages](https://vitejs.dev/guide/static-deploy.html#github-pages) or [Netlify][https://vitejs.dev/guide/static-deploy.html#netlify], but the easiest one with a GUI website is [Vercel](https://vitejs.dev/guide/static-deploy.html#vercel). Follow the instructions on their site by logging in/signing up with Github login.
+There are number of options such as [Github Pages](https://vitejs.dev/guide/static-deploy.html#github-pages) or [Netlify][https://vitejs.dev/guide/static-deploy.html#netlify], but the easiest one with a GUI website is [Vercel](https://vitejs.dev/guide/static-deploy.html#vercel). Follow the instructions on their site by logging in/signing up with Github login.
 
 ## Love you
 
