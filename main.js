@@ -72,6 +72,7 @@ const dailyData =  {
         borderWidth: 1
   }] };
   const dailyOptions = {
+    maintainAspectRatio: false,
     scales: {
       y: {
           beginAtZero: true
@@ -102,6 +103,7 @@ const mobileData = {
   ] }]
   };
   const mobileOptions = {
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'right',
@@ -109,12 +111,14 @@ const mobileData = {
           boxWidth: 20,
           fontStyle: 'bold'
         }
-  } }
+     }
+  }
   };
   let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
+
   });
 
   // MESSAGE USER SECTION
@@ -133,3 +137,6 @@ const mobileData = {
     } else {
       alert(`Message successfully sent to: ${user.value}`);
   } });
+
+
+  
