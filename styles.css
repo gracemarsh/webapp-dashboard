@@ -42,6 +42,18 @@ nav {
   border-bottom: 1px solid white;
   text-align: center;
 }
+#alert {
+  background-color: rgb(97, 97, 177);
+  color: white;
+  font-size: 26px;
+  margin: 1rem;
+  padding: 12px 16px;
+  border-radius: 7px;
+}
+.alert-banner {
+  display: flex;
+  justify-content: space-between;
+}
 #search-input {
   height: 35px;
   padding: 5px;
@@ -128,7 +140,7 @@ p {
   top: -10px;
   left: -6px;
 }
-.separating-line{
+.separating-line {
   height: 37px;
   background-color: grey;
   width: 1px;
@@ -144,7 +156,6 @@ p {
   width: 35px;
   height: 35px;
   margin: 0 5px;
-  
 }
 .profile-pic {
   border-radius: 50%;
@@ -225,17 +236,14 @@ canvas {
   flex-direction: column;
   align-items: center;
 }
-
 .member-text {
   text-align: center;
 }
-
 a {
   font-size: 12px;
   color: rgb(118, 118, 187);
   text-decoration: none;
 }
-
 .member-text {
   padding: 0 30px;
 }
@@ -249,24 +257,22 @@ a {
   border: 1px solid rgb(214, 214, 214);
   border-radius: 5px;
 }
-/* how to change little purple arrow selector???? */
-
 ::placeholder,
 #timezone {
   color: rgb(179, 179, 179);
   font-size: 14px;
 }
 
-#timezone{
+#timezone {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-.timezone-wrapper{
+.timezone-wrapper {
   position: relative;
 }
 
-.timezone-wrapper::after{
+.timezone-wrapper::after {
   content: "▾";
   color: rgb(97, 97, 177);
   font-size: 20px;
@@ -309,8 +315,6 @@ button {
 .settings-container p {
   flex-grow: 1;
 }
-/* Still don't know how to vertically center align the toggle switch white circle. 
-Also don't know how to change toggle switch colour*/
 #span-container-1,
 #span-container-2 {
   width: 90px;
@@ -402,9 +406,9 @@ Also don't know how to change toggle switch colour*/
   .activity-container p {
     text-align: left;
   }
-    
-/* parent (container) position: relative, and then child (the "::after objct" is positioned absolutely */
-  .activity-container::after{
+
+  /* parent (container) position: relative, and then child (the "::after objct" is positioned absolutely */
+  .activity-container::after {
     content: "˲";
     color: rgb(97, 97, 177);
     font-size: 35px;
@@ -413,21 +417,19 @@ Also don't know how to change toggle switch colour*/
     top: 10px;
   }
 
-
   .date {
     text-align: right;
     flex-grow: 1;
   }
-  /* How to get the padding or margin right for the entire page... it's overflowing to the right */
-  /* How to add the little arrows on the RHS Recent Activity */
-  /* How come my settings switches are sensitive to clicks across the entire span? */
-  /* Make the nav bar "sticky" */
 }
 /* -- DESKTOP ------------------------------------------------- */
 @media (min-width: 1024px) {
   /* STRUCTURE */
   .main-header {
     grid-area: dashboard;
+  }
+  #alert {
+    grid-area: alert;
   }
   .traffic {
     grid-area: traffic;
@@ -458,6 +460,7 @@ Also don't know how to change toggle switch colour*/
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "dashboard dashboard"
+      "alert alert"
       "traffic traffic"
       "charts charts"
       "social social"
@@ -468,7 +471,8 @@ Also don't know how to change toggle switch colour*/
     grid-template-columns: 60px 1fr;
   }
   /* STYLING */
-  p, a {
+  p,
+  a {
     font-size: 14px;
   }
   .charts {
