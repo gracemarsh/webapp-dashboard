@@ -80,6 +80,13 @@ let trafficChart = new Chart(trafficCanvas, {
   options: trafficOptions,
 });
 
+// ADDING WEIRD STUFF TRYING TO MAKE TRAFFIC LABELS WORK
+
+let trafficLinks = document.getElementsByClassName("traffic-nav-link");
+
+// div.classList.add("traffic-link-selected");
+// div.classList.remove("traffic-link-selected");
+
 // Daily Traffic
 const dailyCanvas = document.getElementById("daily-chart");
 

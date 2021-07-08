@@ -28,6 +28,12 @@ nav {
   justify-content: center;
   margin: 0;
 }
+nav ul {
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
 .headline {
   background-color: rgb(245, 245, 245);
   height: 50px;
@@ -62,7 +68,15 @@ nav {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  padding: 0;
+}
+
+/* should I be using a different pseudo selector or using JS?  */
+.traffic-nav-link:active {
+  background-color: rgb(113, 193, 125);
+  border-radius: 12px;
+  color: white;
+  padding: 4px 8px;
+  font-size: 14px;
 }
 .switch-ios.switch-light a {
   top: 3px;
@@ -116,6 +130,7 @@ p {
 }
 .traffic-nav-link {
   font-size: 14px;
+  padding: 4px;
 }
 .stat {
   font-size: 38px;
@@ -138,7 +153,7 @@ p {
   -webkit-transform-origin: 50% 4px;
   -moz-animation: ring 4s 0.7s ease-in-out infinite;
   -moz-transform-origin: 50% 4px;
-  animation: ring 4s 0.7s ease-in-out infinite;
+  animation: ring 4s ease-in-out infinite;
   transform-origin: 50% 4px;
 }
 
