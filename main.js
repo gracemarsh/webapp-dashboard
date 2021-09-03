@@ -34,17 +34,17 @@ let trafficCanvas = document.getElementById("traffic-chart")
 
 let weeklyTrafficData = {
   labels: [
-    "16-22",
-    "23-29",
-    "30-5",
-    "6-12",
-    "13-19",
-    "20-26",
-    "27-3",
-    "4-10",
-    "11-17",
-    "18-24",
-    "25-31",
+    "16-17",
+    "18-19",
+    "20-21",
+    "22-23",
+    "24-25",
+    "26-27",
+    "28-29",
+    "30-31",
+    "32-33",
+    "34-35",
+    "36-37",
   ],
   datasets: [
     {
@@ -60,7 +60,7 @@ let weeklyTrafficData = {
 let trafficOptions = {
   aspectRatio: 2.5,
   animation: {
-    duration: 0,
+    duration: 200,
   },
   scales: {
     y: {
@@ -97,8 +97,19 @@ let trafficChart = new Chart(trafficCanvas, {
   actions: trafficActions,
 })
 
+function randomNumberInRange(low, high) {
+  return high - (high - low * Math.random())
+}
+
+function randomize(chart) {
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data = dataset.data.map((x) => randomNumberInRange(500, 3000))
+  })
+  chart.update()
+}
+
 //Traffic Chart Time Modes & Cassette Buttons
-function changeTrafficChartTimeModes() {
+function changeTrafficChartTimeModes(updateChart) {
   const trafficLinks = document.getElementsByClassName("traffic-nav-link")
   const trafficLinksArray = Array.from(trafficLinks)
 
@@ -113,12 +124,13 @@ function changeTrafficChartTimeModes() {
     button.addEventListener("click", (e) => {
       removeActiveClass()
       e.target.classList.add("active")
+      updateChart()
       console.log(e)
     })
   })
 }
 
-changeTrafficChartTimeModes()
+changeTrafficChartTimeModes(() => randomize(trafficChart))
 
 // Daily Traffic
 const dailyCanvas = document.getElementById("daily-chart")
@@ -201,5 +213,7 @@ send.addEventListener("click", (e) => {
     alert("Please fill out message field before sending")
   } else {
     alert(`Message successfully sent to: ${user.value}`)
+    user.value = ""
+    message.value = ""
   }
 })
