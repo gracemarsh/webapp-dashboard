@@ -32,7 +32,7 @@ addNotification()
 // Traffic Chart
 let trafficCanvas = document.getElementById("traffic-chart")
 
-let trafficData = {
+let weeklyTrafficData = {
   labels: [
     "16-22",
     "23-29",
@@ -74,10 +74,27 @@ let trafficOptions = {
   },
 }
 
+const trafficActions = [
+  {
+    name: "Randomize",
+    handler(chart) {
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data = Utils.numbers({
+          count: chart.data.labels.length,
+          min: -100,
+          max: 100,
+        })
+      })
+      chart.update()
+    },
+  },
+]
+
 let trafficChart = new Chart(trafficCanvas, {
   type: "line",
-  data: trafficData,
+  data: weeklyTrafficData,
   options: trafficOptions,
+  actions: trafficActions,
 })
 
 //Traffic Chart Time Modes & Cassette Buttons
