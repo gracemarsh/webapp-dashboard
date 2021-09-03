@@ -1,10 +1,23 @@
+/* something wrong with 320px and the little icons 
+- the user should be able to close the alert by clicking the X button.
+- when page refreshes (when you press submit button my face shows up massive) 
+- Traffic Shart: update hourly, daily weekly - make it functional with different data sets
+*/
+
 /* -- MAIN STYLES ------------------------------------------------- */
 * {
   box-sizing: border-box;
 }
+body {
+  --text-color: #616060;
+  --main-purple: rgb(97, 97, 177);
+  --secondary-purple: rgb(60, 58, 95);
+  --form-background: rgb(200, 200, 200);
+}
+
 #app {
   max-width: 100%;
-  color: #616060;
+  color: var(--text-color);
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -14,7 +27,7 @@ nav {
   align-items: center;
 }
 header {
-  background-color: rgb(97, 97, 177);
+  background-color: var(--main-purple);
   color: white;
   height: 60px;
   padding: 0 8px;
@@ -24,7 +37,7 @@ header {
 }
 nav {
   height: 50px;
-  background-color: rgb(60, 58, 95);
+  background-color: var(--secondary-purple);
   justify-content: center;
   margin: 0;
 }
@@ -33,23 +46,24 @@ nav ul {
   top: 0;
   list-style-type: none;
   padding-inline-start: 0;
+  display: flex;
 }
 .headline {
   background-color: rgb(245, 245, 245);
   height: 50px;
   width: 100%;
-  border-bottom: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid var(--form-background);
 }
 #dashboard {
   background-color: white;
   width: 100px;
   height: 50px;
-  border-right: 1px solid rgb(200, 200, 200);
+  border-right: 1px solid var(--form-background);
   border-bottom: 1px solid white;
   text-align: center;
 }
 #alert {
-  background-color: rgb(97, 97, 177);
+  background-color: var(--main-purple);
   color: white;
   font-size: 26px;
   margin: 1rem;
@@ -69,9 +83,13 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
 }
+.traffic-button {
+  background: none;
+  color: var(--text-color);
+}
 
 /* should I be using a different pseudo selector or using JS?  */
-.traffic-nav-link:active {
+.traffic-nav-link .active {
   background-color: rgb(113, 193, 125);
   border-radius: 12px;
   color: white;
@@ -114,7 +132,7 @@ h3 {
   font-size: 14px;
 }
 h4 {
-  color: rgb(97, 97, 177);
+  color: var(--main-purple);
   font-weight: 500;
   font-size: 16px;
   margin: 0;
@@ -403,6 +421,7 @@ p {
   width: 32px;
   fill: white;
   margin: 0 1rem;
+  display: flex;
 }
 #nav-pic {
   border-radius: 50%;
@@ -438,7 +457,7 @@ canvas {
   fill: white;
 }
 .social-image {
-  background-color: rgb(97, 97, 177);
+  background-color: var(--main-purple);
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -527,7 +546,7 @@ a {
 
 .timezone-wrapper::after {
   content: "▾";
-  color: rgb(97, 97, 177);
+  color: var(--main-purple);
   font-size: 20px;
   position: absolute;
   top: 22px;
@@ -547,7 +566,7 @@ button {
   height: 40px;
   color: white;
   text-transform: uppercase;
-  background-color: rgb(97, 97, 177);
+  background-color: var(--main-purple);
   border: none;
   border-radius: 5px;
   margin: 10px 0;
@@ -573,7 +592,7 @@ button {
   width: 90px;
   height: 35px;
   border: 2px solid rgb(214, 214, 214);
-  background-color: rgb(97, 97, 177);
+  background-color: var(--main-purple);
 }
 #span-container-1 span,
 #span-container-2 span {
@@ -614,6 +633,9 @@ button {
     grid-template-areas:
       "header header"
       "nav main";
+  }
+  nav ul {
+    display: inline-block;
   }
   .nav-icon {
     height: 40px;
@@ -663,7 +685,7 @@ button {
   /* parent (container) position: relative, and then child (the "::after objct" is positioned absolutely */
   .activity-container::after {
     content: "˲";
-    color: rgb(97, 97, 177);
+    color: var(--main-purple);
     font-size: 35px;
     position: absolute;
     right: 15px;
@@ -737,7 +759,7 @@ button {
   }
   .members,
   .message {
-    border-right: 1px solid rgb(200, 200, 200);
+    border-right: 1px solid var(--form-background);
   }
   /* customise switch library */
   .switch-ios.switch-light a {
