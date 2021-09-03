@@ -1,3 +1,7 @@
+/* 
+- .settings-label is screwed up
+ */
+
 /* -- MAIN STYLES ------------------------------------------------- */
 * {
   box-sizing: border-box;
@@ -578,8 +582,9 @@ button {
   padding: 15px 0;
   width: 100%;
 }
-.settings-container p {
+.settings-label {
   flex-grow: 1;
+  background-color: white;
 }
 #span-container-1,
 #span-container-2 {
@@ -747,7 +752,7 @@ button {
   .charts {
     width: 100%;
   }
-  .settings-container p {
+  .settings-label {
     flex-grow: 0;
     width: 200px;
   }

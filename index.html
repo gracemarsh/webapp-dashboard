@@ -27,7 +27,7 @@
       </svg>
       <div id="bell-notification"></div>
       <div class="separating-line"></div>
-      <img id="nav-pic" src="images/member-1.jpg" />
+      <img id="nav-pic" src="images/member-1.jpg" alt="picture of member 1" />
       <h5>Grace Marsh</h5>
     </header>
     <nav>
@@ -228,40 +228,56 @@
       <section class="members">
         <h3>New Members</h3>
         <div class="member-container">
-          <img src="/images/member-1.jpg" class="profile-pic" />
+          <img
+            src="/images/member-1.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p class="name">Grace Marsh</p>
-            <a href="mailto:grace.marsh850@gmail.com?subject=Hi Grace!"
+            <a href="mailto:grace.marsh850@gmail.com?subject=Hi%20Grace!"
               >grace.marsh850@gmail.com</a
             >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="/images/member-2.jpg" class="profile-pic" />
+          <img
+            src="/images/member-2.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p class="name">Tristan Byrd</p>
-            <a href="mailto:tristan.byrd52@gmail.com?subject=Hi Tristan!"
+            <a href="mailto:tristan.byrd52@gmail.com?subject=Hi%20Tristan!"
               >tristan.byrd52@gmail.com</a
             >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="/images/member-3.jpg" class="profile-pic" />
+          <img
+            src="/images/member-3.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p class="name">Tessa Wood</p>
-            <a href="mailto:tessa.wood16@gmail.com?subject=Hi Tessa!"
+            <a href="mailto:tessa.wood16@gmail.com?subject=Hi%20Tessa!"
               >tessa.wood16@gmail.com</a
             >
           </div>
           <p class="date">10/15/20</p>
         </div>
         <div class="member-container">
-          <img src="/images/member-4.jpg" class="profile-pic" />
+          <img
+            src="/images/member-4.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p class="name">Nick Olliver</p>
-            <a href="mailto:nick.oliver82@gmail.com?subject=Hi Nick!"
+            <a href="mailto:nick.oliver82@gmail.com?subject=Hi%20Nick!"
               >nick.oliver82@gmail.com</a
             >
           </div>
@@ -272,14 +288,22 @@
       <section class="recent-activity">
         <h3>Recent Activity</h3>
         <div class="activity-container">
-          <img src="/images/member-1.jpg" class="profile-pic" />
+          <img
+            src="/images/member-1.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p>Grace Marsh commented on <strong>WebApp's SEO Tips</strong></p>
             <p>4 hours ago</p>
           </div>
         </div>
         <div class="activity-container">
-          <img src="/images/member-2.jpg" class="profile-pic" />
+          <img
+            src="/images/member-2.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p>
               Tristan Byrd liked the post
@@ -289,7 +313,11 @@
           </div>
         </div>
         <div class="activity-container">
-          <img src="/images/member-3.jpg" class="profile-pic" />
+          <img
+            src="/images/member-3.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p>
               Tessa Wood commented on
@@ -299,7 +327,11 @@
           </div>
         </div>
         <div class="activity-container">
-          <img src="/images/member-4.jpg" class="profile-pic" />
+          <img
+            src="/images/member-4.jpg"
+            class="profile-pic"
+            alt="profile-picture"
+          />
           <div class="member-text">
             <p>Nick Oliver posted <strong>WebApp's SEO Tips</strong></p>
             <p>1 day ago</p>
@@ -320,7 +352,6 @@
             placeholder="Message for user"
             class="form-field"
             id="messageField"
-            4
           ></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>
@@ -331,7 +362,7 @@
 
         <div class="email-settings">
           <label class="settings-container switch-ios switch-light" onclick="">
-            <p>Send Email Notifications</p>
+            <span class="settings-label">Send Email Notifications</span>
             <input type="checkbox" />
             <span id="span-container-1">
               <span>Off</span>
@@ -344,7 +375,7 @@
         <div class="profile-settings">
           <label class="settings-container switch-ios switch-light" onclick="">
             <input type="checkbox" />
-            <p>Set Profile to Public</p>
+            <span class="settings-label">Set Profile to Public</span>
             <span id="span-container-2">
               <span>Off</span>
               <span>On</span>
