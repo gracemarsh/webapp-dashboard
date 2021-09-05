@@ -609,6 +609,9 @@ button {
   width: 47%;
 }
 
+.switch-ios.switch-light > span {
+  background: none;
+}
 /* -- TABLET ------------------------------------------------- */
 @media (min-width: 768px) {
   /* STRUCTURE */
