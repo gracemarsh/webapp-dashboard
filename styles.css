@@ -612,6 +612,7 @@ button {
 .switch-ios.switch-light > span {
   background: none;
 }
+/* problem at 750 */
 /* -- TABLET ------------------------------------------------- */
 @media (min-width: 768px) {
   /* STRUCTURE */
