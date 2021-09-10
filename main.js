@@ -1,3 +1,10 @@
+const Chart = window.Chart
+// const t = console.assert(
+//   typeof Chart !== "undefined",
+//   "Chart.js library not loaded"
+// )
+// console.log(t)
+
 function addNotification() {
   const alertBanner = document.getElementById("alert")
   alertBanner.innerHTML = `<div class="alert-banner">
@@ -12,7 +19,7 @@ function addNotification() {
       document.getElementById("bell-notification").style.display = "none"
     }
     let msg = new SpeechSynthesisUtterance()
-    msg.text = "Alert deleted."
+    msg.text = "Alert deleted"
     speechSynthesis.speak(msg)
   })
 }
@@ -65,27 +72,10 @@ let trafficOptions = {
   },
 }
 
-const trafficActions = [
-  {
-    name: "Randomize",
-    handler(chart) {
-      chart.data.datasets.forEach((dataset) => {
-        dataset.data = Utils.numbers({
-          count: chart.data.labels.length,
-          min: -100,
-          max: 100,
-        })
-      })
-      chart.update()
-    },
-  },
-]
-
 let trafficChart = new Chart(trafficCanvas, {
   type: "line",
   data: weeklyTrafficData,
   options: trafficOptions,
-  actions: trafficActions,
 })
 
 function randomNumberInRange(low, high) {
@@ -94,7 +84,7 @@ function randomNumberInRange(low, high) {
 
 function randomize(chart) {
   chart.data.datasets.forEach((dataset) => {
-    dataset.data = dataset.data.map((x) => randomNumberInRange(500, 3000))
+    dataset.data = dataset.data.map(() => randomNumberInRange(500, 3000))
   })
   chart.update()
 }
@@ -150,7 +140,7 @@ const dailyOptions = {
     },
   },
 }
-let dailyChart = new Chart(dailyCanvas, {
+new Chart(dailyCanvas, {
   type: "bar",
   data: dailyData,
   options: dailyOptions,
@@ -181,7 +171,7 @@ const mobileOptions = {
     },
   },
 }
-let mobileChart = new Chart(mobileCanvas, {
+new Chart(mobileCanvas, {
   type: "doughnut",
   data: mobileData,
   options: mobileOptions,
@@ -208,3 +198,5 @@ send.addEventListener("click", (e) => {
     message.value = ""
   }
 })
+
+// TODO:
